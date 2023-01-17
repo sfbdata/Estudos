@@ -1,3 +1,1 @@
-# banco
-# banco
 # estudo
