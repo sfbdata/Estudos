@@ -2,12 +2,7 @@
 
 require_once 'autoload.php';
 
-
-use Samuel\Banco\Modelo\Conta\Conta;
-use Samuel\Banco\Modelo\Conta\ContaCorrente;
-use Samuel\Banco\Modelo\Conta\ContaPoupanca;
-use Samuel\Banco\Modelo\Conta\Titular;
-
+use Samuel\Banco\Modelo\Conta\{Conta, ContaCorrente, ContaPoupanca, Titular};
 use Samuel\Banco\Modelo\Endereco;
 
 
@@ -23,14 +18,7 @@ $c2 = new ContaPoupanca(
     new Titular(
         '321',
         'Edlúcia',
-        new Endereco(
-            'kjh',
-            'asd',
-            'qwe',
-            'oiu',
-            'ert'
-            
-        )
+        new Endereco('kjh', 'asd', 'qwe', 'oiu', 'ert')
     )
 );
 

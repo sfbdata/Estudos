@@ -1,24 +1,29 @@
 <?php
 
 namespace Samuel\Banco\Modelo;
+
+
 class Funcionario extends Pessoa
 {
-    private Pessoa $pessoa;
+
     private string $cargo;
+	private float $salario;
 
     
-    public function __construct(string $cpf, string $nome, string $cargo) {        
-        parent::__construct($cpf, $nome);
+    public function __construct(string $nome, string $cpf, string $cargo, float $salario) {        
+        parent::__construct($nome,$cpf);
     	$this->cargo = $cargo;
+		$this->salario = $salario;
     }
 
-	
 	public function getCargo() {
 		return $this->cargo;
-	}	
-
-	public function setCargo($cargo): self {
-		$this->cargo = $cargo;
-		return $this;
+	}	  
+	public function getSalario(): float {
+		return $this->salario;
 	}
+	public function calculabonificacao(): float{
+		return $this->salario * 0.01;
+	}
+
 }
