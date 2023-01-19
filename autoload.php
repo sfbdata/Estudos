@@ -12,7 +12,7 @@ spl_autoload_register(function (string $nomeCompletoDaClasse) {
     if(file_exists($caminhoArquivo)){
         require_once $caminhoArquivo;
     } else {
-        echo "deu problema aiiikkkkkkkkkkkkkkkkkkkkkkkk" . PHP_EOL;
+        echo "autoload deu problema aiiikkkkkkkkkkkkkkkkkkkkkkkk" . PHP_EOL;
         echo $caminhoArquivo . PHP_EOL;
     }
 

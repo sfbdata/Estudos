@@ -2,9 +2,10 @@
 
 namespace Samuel\Banco\Modelo\Conta;
 
+use Samuel\Banco\Modelo\Autenticavel;
 use Samuel\Banco\Modelo\Endereco;
 use Samuel\Banco\Modelo\Pessoa;
-class Titular extends Pessoa
+class Titular extends Pessoa implements Autenticavel
 {
     private Endereco $endereco;
 
@@ -27,4 +28,7 @@ class Titular extends Pessoa
         return $this->getnumero();
     }
 
+	public function podeautenticar(string $senha) {
+        return $senha == 'abcd';
+	}
 }

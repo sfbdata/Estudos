@@ -2,7 +2,7 @@
 
 namespace Samuel\Banco\Service;
 
-use Samuel\Banco\Modelo\Funcionario;
+use Samuel\Banco\Modelo\Funcionario\Funcionario;
 
 class ControladorDeBonificacoes
 {
